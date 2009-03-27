@@ -84,7 +84,10 @@ module Sinatra
         # 
         def cache_file_name(path,opts={})
           name = (path.empty? || path == "/") ? "index" : Rack::Utils.unescape(path.sub(/^(\/)/,'').chomp('/'))
-          name << options.cache_page_extension unless (name.split('/').last || name).include? '.'
+          opts.each do |key, value|
+            name = name + "." + key.to_s.downcase + "." + value.to_s.downcase
+          end
+          name << options.cache_page_extension # unless (name.split('/').last || name).include? '.'
           return name
         end
         

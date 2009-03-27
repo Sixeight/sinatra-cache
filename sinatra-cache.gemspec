@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.description = %q{Simple Page Caching for Sinatra [www.sinatrarb.com]}
   s.email = %q{kematzy@gmail.com}
   s.extra_rdoc_files = ["README.textile", "LICENSE"]
-  s.files = ["Dropbox-Code-Gems-sinatra-cache.tmproj", "README.textile", "VERSION.yml", "lib/sinatra", "lib/sinatra/cache.rb", "test/cache_test.rb", "test/fixtures", "test/fixtures/classic.rb", "test/fixtures/myapp.rb", "test/fixtures/myapp_default.rb", "test/fixtures/public", "test/fixtures/public/system", "test/fixtures/public/system/cache", "test/fixtures/views", "test/fixtures/views/index.erb", "test/helper.rb", "test/SPECS.rdoc", "LICENSE"]
+  s.files = ["README.textile", "VERSION.yml", "lib/sinatra", "lib/sinatra/cache.rb", "test/cache_test.rb", "test/fixtures", "test/fixtures/classic.rb", "test/fixtures/myapp.rb", "test/fixtures/myapp_default.rb", "test/fixtures/public", "test/fixtures/public/system", "test/fixtures/public/system/cache", "test/fixtures/views", "test/fixtures/views/index.erb", "test/helper.rb", "test/SPECS.rdoc", "LICENSE"]
   s.has_rdoc = true
   s.homepage = %q{http://github.com/kematzy/sinatra-cache}
   s.rdoc_options = ["--inline-source", "--charset=UTF-8"]
