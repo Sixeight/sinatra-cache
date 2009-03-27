@@ -53,7 +53,7 @@ module Sinatra
       def cache_expire(path = nil, opts={})
         return unless options.cache_enabled
         
-        path = (path.nil?) ? cache_page_path(request.path_info) : cache_page_path(path)
+        path = (path.nil?) ? cache_page_path(request.path_info) : cache_page_path(path, opts)
         if File.exist?(path)
           File.delete(path)
           log("Expired Page deleted at: [#{path}]",:info)
@@ -75,6 +75,14 @@ module Sinatra
         "<!-- page cached: #{Time.now.strftime("%Y-%d-%m %H:%M:%S")} -->\n" if options.cache_enabled
       end
       
+      # Simple method to see if a file already exists in the cache
+      #
+      # TODO: Testcases!
+      
+      def cached_file_exists(path, opts={})
+        path = (path.nil?) ? cache_page_path(request.path_info) : cache_page_path(path, opts)
+        return File.exist?(path)
+      end
       
       private
         
